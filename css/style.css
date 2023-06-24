@@ -1,1 +1,132 @@
+/*
+ File: style.css
+ Assignment: Interactive Dynamic Multiplication Table
+ Sindhuja Ghale, UMass Lowell Computer Science, Sindhuja_Ghale@student.uml.edu
+ Copyright (c) 2023 by Sindhuja Ghale. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the
+ author.
+ Updated by SG on June 24, 2023 at 7:00 PM
+ Brief Overview: This interactive multiplication table dynamically generates based on user input, utilizing the power of jQuery. This is the part two of HW4, where more stuff like slider and tabs are implemented. 
+ Sources of Help: w3school, Class Notes, and Stack Overflows. 
+*/
 
+body {
+  background-color: pink;
+}
+
+/* Main heading styles */
+h1{
+  color: #fbfbfb;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 1px 1px #000000;
+}
+
+/* Subheading styles */
+h2{
+  color: #3e3e3e;
+  font-weight: bold;
+  margin-bottom: -1px;
+  font-variant-caps: petite-caps;
+  font-size: 30px;
+}
+
+/* Form (User input area) style */
+#form {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 2px outset black;
+  display: block;
+  float: left;
+  background-color: rgb(255, 118, 248);
+}
+
+/* disclamer (inside the form) style */
+#disclaimer{
+  font-style: italic;
+  font-size: small;
+}
+
+/* Input area box style*/
+input[type=number] {
+  padding:5px; 
+  border:2px solid #ccc; 
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 40px;
+}
+
+/* Input area box style */
+input[type=number]:focus {
+  border-color:#333;
+}
+
+/* Button styling */
+input[type=submit] {
+  padding:5px 15px; 
+  background:#ccc; 
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+}
+
+/* Error Messages styles */
+#errorMSG{
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  float: left;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 65px;
+}
+
+/* Multiplication table style */
+#table{
+  margin-right:auto;
+  max-width: 80%;
+  max-height: 600px;
+  display: block;
+  overflow: auto;
+  table-layout: fixed;
+  clear: both;
+}
+
+/* table styling */
+#table table, th, td{
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100px;
+  padding: 3px;  
+}
+
+/* table styling */
+#table th{
+  top: 0;
+  left: 0;
+  background-color: rgb(126, 126, 126);
+  position: sticky;
+  
+}
+
+/* Even cells style */
+#table td:nth-child(even){
+  background-color: rgb(231, 169, 236);
+}
+
+/* Tabs styling */
+#tabs-1{font-size: 14px;}
+.ui-widget-header {
+ background:#b9cd6d;
+ border: 1px solid #b9cd6d;
+ color: #FFFFFF;
+ font-weight: bold;
+}
