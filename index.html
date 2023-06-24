@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+ File: index.html
+ Assignment: Interactive Dynamic Multiplication Table
+ Sindhuja Ghale, UMass Lowell Computer Science, Sindhuja_Ghale@student.uml.edu
+ Copyright (c) 2023 by Sindhuja Ghale. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the
+ author.
+ Updated by SG on June 24, 2023 at 7:00 PM
+ Brief Overview: This interactive multiplication table dynamically generates based on user input, utilizing the power of jQuery. This is the part two of HW4, where more stuff like slider and tabs are implemented. 
+ Sources of Help: w3school, Class Notes, and Stack Overflows. 
+-->
+
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css
+         " rel = "stylesheet">
+        <title>HW4</title>
+    </head>
+    <body>
+        <h1 class = "header"> Mutiplication Table</h1>
+        <!-- Instructions for the user -->
+        <div id="direction">
+            <h2>Rules:</h2>
+            <br><p>Please note, the form does not accept the following.</p>
+            <ol>
+                <li>Letters</li>
+                <li>Integers greater than 50</li>
+                <li>Integers less than -50</li>
+                <li>When the integer in the minimum value is greater than the integer in the maximum value, it will swap the values.</li>
+                <li>When entered decimals as input, it will be rounded to the nearest whole number.</li>
+            </ol>
+        </div>     
+
+        <!-- Form to input range values -->
+        <div id="form_and_error">
+            <div id="form">
+                <p id="disclaimer">Input here </p>
+                <form id="nums"> 
+                    <div id="num1div">
+                        <label for="num1">Minimum Column Value:</label>
+                        <input type="number" id="num1" name="num1" oninput="updateTable(1)" >
+                        <div class="slider" id="slider1"></div>
+                    </div>
+                    
+                    <div id="num2div">
+                        <label for="secondNum">Maximum Column Value:</label>
+                        <input type="number" id="num2" name="num2" oninput="updateTable(2)">
+                        <div class="slider" id="slider2"></div>
+                    </div>
+
+                    <div id="num3div">
+                        <label for="thirdNum">Minimum Row Value:</label>
+                        <input type="number" id="num3" name="num3" oninput="updateTable(3)">
+                        <div class="slider" id="slider3"></div>
+                    </div>
+
+                    <div id="num4div">
+                        <label for="fourthNum">Maximum Row Value:</label>
+                        <input type="number" id="num4" name="num4" oninput="updateTable(4)">
+                        <div class="slider" id="slider4"></div>
+                    </div>
+
+                    <!-- Button -->
+                    <button type = "submit" value="Submit" id="add_table">save</button>
+                </form> 
+            </div>
+            
+            <!-- Error messages section -->
+            <div id="errorMSG"></div>
+            <!--To display the multiplication table -->
+            <div id="table"></div>
+
+            <!-- Saved tabs an close button -->
+            <div id="tabs">
+                <button id="closeTabs" onclick="closeTabs()">close tab(s)</button>
+                <ul></ul>
+            </div>
+        </div>
+    
+        <!-- JavaScript file and jQuery plugins--> 
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.13.0-rc.3/jquery-ui.js" integrity="sha256-tYLuvehjddL4JcVWw1wRMB0oPSz7fKEpdZrIWf3rWNA=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+        <script src="javascript/script.js"></script>
+        <script src="javascript/tabs.js"></script>
+        <script src="javascript/validate.js"></script>
+    </body>
+</html>
